@@ -1,21 +1,12 @@
-print("PILAS iniciado")
+import csv
 
-productos = []
+print("=== PILAS ===")
 
-while True:
-    nombre = input("Nombre del producto: ")
-    fecha = input("Fecha de caducidad (AAAA-MM-DD): ")
+producto = input("Producto: ")
+fecha = input("Fecha de caducidad (AAAA-MM-DD): ")
 
-    productos.append({
-        "nombre": nombre,
-        "fecha": fecha
-    })
+with open("productos.csv", "a", newline="") as archivo:
+    escritor = csv.writer(archivo)
+    escritor.writerow([producto, fecha])
 
-    print("\nProductos registrados:")
-    print(productos)
-
-    salir = input("\n¿Desea salir? (s/n): ")
-
-    if salir.lower() == "s":
-        break
-      
+print("Producto guardado correctamente")
