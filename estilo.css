@@ -1,0 +1,177 @@
+/* ====== ESTILOS GENERALES ====== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+body {
+    background-color: #f0f4f8;
+    color: #1a202c;
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* ====== CABECERA ====== */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 25px 20px;
+    background: linear-gradient(135deg, #2b6cb0 0%, #2c5282 100%);
+    color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(43, 108, 176, 0.3);
+}
+
+header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 5px;
+}
+
+header p {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* ====== SECCIONES ====== */
+.formulario, .lista {
+    background: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease;
+}
+
+.formulario:hover, .lista:hover {
+    transform: translateY(-2px);
+}
+
+h2 {
+    color: #2d3748;
+    margin-bottom: 18px;
+    font-size: 1.25rem;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 8px;
+}
+
+/* ====== FORMULARIO ====== */
+input {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #cbd5e0;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #2b6cb0;
+    box-shadow: 0 0 0 3px rgba(43, 108, 176, 0.2);
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    margin: 12px 0 0;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+#agregar {
+    background: linear-gradient(135deg, #2f855a 0%, #276749 100%);
+    color: white;
+}
+
+#agregar:hover {
+    background: linear-gradient(135deg, #276749 0%, #22543d 100%);
+}
+
+/* ====== LISTA DE PRODUCTOS ====== */
+ul {
+    list-style: none;
+}
+
+li {
+    padding: 15px 12px;
+    border-bottom: 1px solid #e2e8f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+li:hover {
+    background-color: #f7fafc;
+    border-radius: 6px;
+}
+
+/* ====== ESTADOS DE COLOR ====== */
+.estado-ok {
+    color: #2f855a;
+    font-weight: bold;
+}
+
+.estado-proximo {
+    color: #d69e2e;
+    font-weight: bold;
+}
+
+.estado-vencido {
+    color: #e53e3e;
+    font-weight: bold;
+}
+
+/* ====== BOTÓN ELIMINAR ====== */
+.btn-eliminar {
+    background: #e53e3e;
+    color: white;
+    width: auto;
+    padding: 8px 14px;
+    font-size: 14px;
+    border-radius: 6px;
+}
+
+.btn-eliminar:hover {
+    background: #c53030;
+}
+
+/* ====== ADAPTACIÓN A CELULAR ====== */
+@media (max-width: 600px) {
+    body {
+        padding: 12px;
+    }
+
+    header h1 {
+        font-size: 1.7rem;
+    }
+
+    li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .btn-eliminar {
+        width: 100%;
+    }
+}
